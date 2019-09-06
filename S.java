@@ -21,7 +21,7 @@ public class S {
             Logger.getLogger(S.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println(A.length()+B.length());
-        if(A.charAt(0)<B.charAt(0)){
+        if(A.charAt(0)<=B.charAt(0)){
             System.out.println("No");
         } 
         else {
