@@ -1,7 +1,5 @@
 import java.io.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class S {
 
@@ -12,13 +10,13 @@ public class S {
         try {
             A = br.readLine();
         } catch (IOException ex) {
-            Logger.getLogger(S.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);
         }
         String B = null;
         try {
             B = br.readLine();
         } catch (IOException ex) {
-            Logger.getLogger(S.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);
         }
         System.out.println(A.length()+B.length());
         if(A.charAt(0)<=B.charAt(0)){
