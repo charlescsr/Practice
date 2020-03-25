@@ -1,0 +1,7 @@
+d1,m1,y1=input().split(' ')
+d2,m2,y2=input().split(' ')
+sd=int(d1)-int(d2)
+sm=int(m1)-int(m2)
+sy=int(y1)-int(y2)
+fine=10000 if sy>0 else (sm*500 if sm>0 and sy==0 else (sd*15 if sd>0 and sy==0 else 0))
+print(fine)
