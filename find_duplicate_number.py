@@ -1,0 +1,21 @@
+class Solution:
+    def findDuplicate(self, nums):
+        # Find the intersection point of the two runners.
+        tortoise = hare = nums[0]
+        while True:
+            tortoise = nums[tortoise]
+            hare = nums[nums[hare]]
+            if tortoise == hare:
+                break
+        
+        # Find the "entrance" to the cycle.
+        tortoise = nums[0]
+        while tortoise != hare:
+            tortoise = nums[tortoise]
+            hare = nums[hare]
+        
+        return hare
+'''
+This algorithm is known as the Floyd tortoise and hare method which involves breaking the loop when the hare meets the tortoise
+O(n) time and O(1) space
+'''
